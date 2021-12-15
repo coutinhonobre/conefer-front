@@ -1,18 +1,51 @@
-<mat-sidenav class="sidenav" mode="side" opened viewport="fixed" fixedTopGap="top" fixedBottomGap="bottom">
-
+<mat-sidenav color="primary" class="sidenav" mode="side" opened viewport="fixed" fixedTopGap="top" fixedBottomGap="bottom">
+    <mat-card>
+        <mat-form-field appearance="fill" [style.width.%]="100">
+            <mat-label>
+                <mat-icon aria-hidden="false" aria-label="Usuário">people</mat-icon>Usuário
+            </mat-label>
+            <select matNativeControl required>
+              <option value="Cleiton Ferreira">Cleiton Ferreira</option>
+              <option value="Sair">Sair</option>
+            </select>
+        </mat-form-field>
+    </mat-card>
     <mat-nav-list class="nav-list">
-        <button mat-button [matMenuTriggerFor]="menu">Cadastro</button>
+        <button mat-button [matMenuTriggerFor]="menu" color="link">Cadastro</button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item>
-                <a class="menuSlide" routerLink="cursos">
-                    <em class="material-icons">
-                        people
-                    </em>
+                <a class="menuSlide" routerLink="clientes" color="link">
                     Clientes
                 </a>
             </button>
         </mat-menu>
-
+        <br />
+        <button mat-button color="link">Venda</button>
+        <br />
+        <button mat-button color="link">Compra</button>
+        <br />
+        <button mat-button color="link">Relatórios</button>
+        <br />
+        <button mat-button color="link">Pagamento</button>
+        <br />
+        <button mat-button color="link">Recebimento</button>
+        <br />
+        <button mat-button color="link">Utilitário</button>
+        <mat-divider></mat-divider>
     </mat-nav-list>
+
+    <mat-list color="link" class="footerMenu">
+        <mat-list-item>
+            <a mat-button href="#">
+                <mat-icon>settings</mat-icon>
+                Configurações</a>
+        </mat-list-item>
+        <mat-list-item>
+            <a mat-button href="#">
+                <mat-icon>notifications_none</mat-icon>
+                Notificações</a>
+        </mat-list-item>
+    </mat-list>
+
 
 </mat-sidenav>
